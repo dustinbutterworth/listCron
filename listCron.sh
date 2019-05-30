@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/usr/bin/env bash
 DIRECTORY="./listCron"
 LSFILE="lscron.txt"
 CRONFILE="cron.txt"
 
 # Files/dirs we're hitting
-LSLIST="/var/spool/cron /etc/cron*"
-CRONLIST="/etc/cron.d/* /etc/at.allow /etc/at.deny /etc/cron.allow /etc/cron.deny /etc/crontab /etc/anacrontab /var/spool/cron/crontabs/root"
+LSLIST=( "/var/spool/cron" "/etc/cron*" )
+CRONLIST=( "/etc/cron.d/*" "/etc/at.allow" "/etc/at.deny" "/etc/cron.allow" "/etc/cron.deny" "/etc/crontab" "/etc/anacrontab" "/var/spool/cron/crontabs/root" )
 
 #Create Directory if one does not exist
 if [ ! -d $DIRECTORY ]; then
